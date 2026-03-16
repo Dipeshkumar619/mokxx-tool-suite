@@ -14,6 +14,7 @@ import Base64EncoderDecoder from "./pages/tools/developer/Base64EncoderDecoder";
 import WordCounter from "./pages/tools/text/WordCounter";
 import CaseConverter from "./pages/tools/text/CaseConverter";
 import SlugGenerator from "./pages/tools/seo/SlugGenerator";
+import TimezoneConverter from "./pages/tools/developer/TimezoneConverter";
 import GenericToolPage from "./pages/tools/GenericToolPage";
 
 const queryClient = new QueryClient();
