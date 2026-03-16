@@ -1,7 +1,7 @@
 import { 
   Dumbbell, Heart, Flame, Beef, PieChart,
   Youtube, Download, Image, ImageMinus, FileImage,
-  Braces, Binary, Fingerprint, Clock, Regex,
+  Braces, Binary, Fingerprint, Clock, Regex, Globe,
   FileText, Type, CaseSensitive, ArrowDownAZ, ListFilter,
   Search, Tag, Hash, Eye,
   LucideIcon
