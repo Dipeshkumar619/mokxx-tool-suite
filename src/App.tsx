@@ -14,6 +14,7 @@ import Base64EncoderDecoder from "./pages/tools/developer/Base64EncoderDecoder";
 import WordCounter from "./pages/tools/text/WordCounter";
 import CaseConverter from "./pages/tools/text/CaseConverter";
 import SlugGenerator from "./pages/tools/seo/SlugGenerator";
+import TimezoneConverter from "./pages/tools/developer/TimezoneConverter";
 import GenericToolPage from "./pages/tools/GenericToolPage";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/tools/developer/json-formatter" element={<JSONFormatter />} />
           <Route path="/tools/developer/uuid-generator" element={<UUIDGenerator />} />
           <Route path="/tools/developer/base64-encoder-decoder" element={<Base64EncoderDecoder />} />
+          <Route path="/tools/developer/timezone-converter" element={<TimezoneConverter />} />
           <Route path="/tools/text/word-counter" element={<WordCounter />} />
           <Route path="/tools/text/case-converter" element={<CaseConverter />} />
           <Route path="/tools/seo/slug-generator" element={<SlugGenerator />} />

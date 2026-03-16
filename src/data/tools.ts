@@ -1,7 +1,7 @@
 import { 
   Dumbbell, Heart, Flame, Beef, PieChart,
   Youtube, Download, Image, ImageMinus, FileImage,
-  Braces, Binary, Fingerprint, Clock, Regex,
+  Braces, Binary, Fingerprint, Clock, Regex, Globe,
   FileText, Type, CaseSensitive, ArrowDownAZ, ListFilter,
   Search, Tag, Hash, Eye,
   LucideIcon
@@ -65,6 +65,7 @@ export const categories: Category[] = [
       { name: "UUID Generator", slug: "uuid-generator", description: "Generate unique UUIDs instantly", icon: Fingerprint },
       { name: "Timestamp Converter", slug: "timestamp-converter", description: "Convert between Unix timestamps and dates", icon: Clock },
       { name: "Regex Tester", slug: "regex-tester", description: "Test and debug regular expressions", icon: Regex },
+      { name: "Timezone Converter", slug: "timezone-converter", description: "Convert times across 16+ global timezones", icon: Globe },
     ],
   },
   {
