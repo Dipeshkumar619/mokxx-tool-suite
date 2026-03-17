@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import { Search } from "lucide-react";
+import { Search, Sun, Moon } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { searchTools } from "@/data/tools";
+import { useTheme } from "@/hooks/use-theme";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const results = query.length > 1 ? searchTools(query) : [];
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -82,6 +85,10 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+
+        <Button variant="ghost" size="icon" onClick={toggleTheme} className="shrink-0">
+          {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+        </Button>
       </div>
     </header>
   );
