@@ -19,9 +19,9 @@ export default function ToolLayout({ category, tool, children, faq, relatedTools
       <main className="flex-1">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-8">
-            <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <Link to={`/tools/${category.slug}`} className="hover:text-foreground transition-colors">{category.name}</Link>
+            <Link to={`/tools/${category.slug}`} className="hover:text-primary transition-colors">{category.name}</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-foreground font-medium">{tool.name}</span>
           </nav>
@@ -53,7 +53,7 @@ export default function ToolLayout({ category, tool, children, faq, relatedTools
             </div>
 
             <aside className="lg:col-span-4 space-y-8">
-              <div className="rounded-xl bg-secondary p-6 ring-1 ring-border">
+              <div className="rounded-xl bg-secondary/50 p-6 border border-border">
                 <p className="label-text mb-3">Advertisement</p>
                 <div className="aspect-square bg-muted rounded-lg flex items-center justify-center">
                   <span className="text-xs text-muted-foreground">Ad Space</span>
@@ -70,7 +70,7 @@ export default function ToolLayout({ category, tool, children, faq, relatedTools
                         to={`/tools/${category.slug}/${t.slug}`}
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
                       >
-                        <t.icon className="w-4 h-4 text-muted-foreground" />
+                        <t.icon className="w-4 h-4 text-primary/70" />
                         <span className="text-sm font-medium text-foreground">{t.name}</span>
                       </Link>
                     ))}
