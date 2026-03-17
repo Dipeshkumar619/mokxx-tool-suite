@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root, .dark {
     --background: 225 15% 8%;
     --foreground: 210 20% 92%;
     --card: 225 15% 11%;
@@ -27,7 +27,6 @@
     --ring: 217 91% 60%;
     --radius: 0.75rem;
 
-    /* MOKXX Custom Tokens */
     --surface: 225 15% 10%;
     --surface-foreground: 215 20% 75%;
     --result-bg: 217 40% 12%;
@@ -46,6 +45,48 @@
     --sidebar-accent-foreground: 210 20% 85%;
     --sidebar-border: 225 14% 18%;
     --sidebar-ring: 217 91% 60%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 265 80% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 55%;
+    --radius: 0.75rem;
+
+    --surface: 210 40% 98%;
+    --surface-foreground: 215 25% 27%;
+    --result-bg: 213 100% 97%;
+    --result-border: 217 91% 55%;
+    --glow-primary: 217 91% 55%;
+    --glow-accent: 265 80% 60%;
+    --tool-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+    --tool-shadow-hover: 0 0 0 1px rgba(0,0,0,.08), 0 8px 16px rgba(0,0,0,.08);
+    --hero-gradient: linear-gradient(135deg, hsl(217 91% 55% / 0.06), hsl(265 80% 60% / 0.05));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 217 91% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 55%;
   }
 }
 
