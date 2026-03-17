@@ -3,12 +3,12 @@ import { categories } from "@/data/tools";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-secondary/50 mt-20">
+    <footer className="border-t border-border bg-card/50 mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-[0_0_12px_hsl(217_91%_60%/0.3)]">
                 <span className="text-primary-foreground font-bold text-sm">M</span>
               </div>
               <span className="font-bold text-lg tracking-tight text-foreground">MOKXX</span>
@@ -23,7 +23,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {cat.tools.slice(0, 4).map(tool => (
                   <li key={tool.slug}>
-                    <Link to={`/tools/${cat.slug}/${tool.slug}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <Link to={`/tools/${cat.slug}/${tool.slug}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {tool.name}
                     </Link>
                   </li>
@@ -35,8 +35,8 @@ export default function Footer() {
         <div className="border-t border-border mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} MOKXX. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link to="/about" className="text-xs text-muted-foreground hover:text-foreground transition-colors">About</Link>
-            <Link to="/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/about" className="text-xs text-muted-foreground hover:text-primary transition-colors">About</Link>
+            <Link to="/privacy" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </div>
