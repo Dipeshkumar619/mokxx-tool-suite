@@ -31,9 +31,9 @@ function getWordsForLevel(level: number): number {
 }
 
 function getTimeForLevel(level: number): number {
-  const base = 5;
+  const base = 10;
   const words = getWordsForLevel(level);
-  return Math.max(base, Math.ceil(words * 1.2)); // more words = more time
+  return Math.max(base, Math.ceil(words * 1.5)); // more words = more time
 }
 
 type Phase = "idle" | "memorize" | "recall" | "result";
