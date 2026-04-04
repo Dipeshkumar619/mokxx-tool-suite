@@ -131,12 +131,13 @@ export default function MemoryWordGame() {
   const allCorrect = results.length > 0 && results.every(r => r.correct);
   const correctCount = results.filter(r => r.correct).length;
 
+  const found = findTool("games", "memory-word-game");
+  if (!found) return null;
+
   return (
     <ToolLayout
-      categorySlug="games"
-      toolSlug="memory-word-game"
-      title="Memory Word Game"
-      description="Test and improve your memory by memorizing words that flash on screen"
+      category={found.category}
+      tool={found.tool}
     >
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Stats bar */}

@@ -96,6 +96,16 @@ export const categories: Category[] = [
       { name: "Open Graph Preview Tool", slug: "open-graph-preview", description: "Preview how your page looks when shared", icon: Eye },
     ],
   },
+  {
+    name: "Games & Brain Training",
+    slug: "games",
+    description: "Fun games to train your brain",
+    icon: Gamepad2,
+    color: "text-primary",
+    tools: [
+      { name: "Memory Word Game", slug: "memory-word-game", description: "Memorize flashing words and test your recall", icon: Brain },
+    ],
+  },
 ];
 
 export function findTool(categorySlug: string, toolSlug: string): { category: Category; tool: Tool } | null {
