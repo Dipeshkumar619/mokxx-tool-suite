@@ -71,6 +71,8 @@ const App = () => (
           {/* Media */}
           <Route path="/tools/media/image-compressor" element={<ImageCompressor />} />
           <Route path="/tools/media/image-converter" element={<ImageConverter />} />
+          {/* Games */}
+          <Route path="/tools/games/memory-word-game" element={<MemoryWordGame />} />
           {/* Generic fallback for unimplemented tools */}
           <Route path="/tools/:categorySlug/:toolSlug" element={<GenericToolPage />} />
           <Route path="*" element={<NotFound />} />
