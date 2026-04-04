@@ -75,11 +75,25 @@ export default function MemoryWordGame() {
   }, [phase, timer]);
 
   const handleInputChange = (index: number, value: string) => {
-    setUserInputs(prev => {
-      const next = [...prev];
-      next[index] = value;
-      return next;
-    });
+    const lower = value.trim().toLowerCase();
+    // Auto-populate if 2+ chars match the start of the correct word
+    if (lower.length >= 2 && words[index].toLowerCase().startsWith(lower)) {
+      setUserInputs(prev => {
+        const next = [...prev];
+        next[index] = words[index];
+        return next;
+      });
+      // Auto-focus next input
+      if (index < words.length - 1) {
+        setTimeout(() => inputRefs.current[index + 1]?.focus(), 50);
+      }
+    } else {
+      setUserInputs(prev => {
+        const next = [...prev];
+        next[index] = value;
+        return next;
+      });
+    }
   };
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
