@@ -31,9 +31,9 @@ function getWordsForLevel(level: number): number {
 }
 
 function getTimeForLevel(level: number): number {
-  const base = 5;
+  const base = 10;
   const words = getWordsForLevel(level);
-  return Math.max(base, Math.ceil(words * 1.2)); // more words = more time
+  return Math.max(base, Math.ceil(words * 1.5)); // more words = more time
 }
 
 type Phase = "idle" | "memorize" | "recall" | "result";
@@ -75,11 +75,25 @@ export default function MemoryWordGame() {
   }, [phase, timer]);
 
   const handleInputChange = (index: number, value: string) => {
-    setUserInputs(prev => {
-      const next = [...prev];
-      next[index] = value;
-      return next;
-    });
+    const lower = value.trim().toLowerCase();
+    // Auto-populate if 2+ chars match the start of the correct word
+    if (lower.length >= 2 && words[index].toLowerCase().startsWith(lower)) {
+      setUserInputs(prev => {
+        const next = [...prev];
+        next[index] = words[index];
+        return next;
+      });
+      // Auto-focus next input
+      if (index < words.length - 1) {
+        setTimeout(() => inputRefs.current[index + 1]?.focus(), 50);
+      }
+    } else {
+      setUserInputs(prev => {
+        const next = [...prev];
+        next[index] = value;
+        return next;
+      });
+    }
   };
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
