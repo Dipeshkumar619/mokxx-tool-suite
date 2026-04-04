@@ -29,6 +29,7 @@ import KeywordDensityChecker from "./pages/tools/seo/KeywordDensityChecker";
 import OpenGraphPreview from "./pages/tools/seo/OpenGraphPreview";
 import ImageCompressor from "./pages/tools/media/ImageCompressor";
 import ImageConverter from "./pages/tools/media/ImageConverter";
+import MemoryWordGame from "./pages/tools/games/MemoryWordGame";
 import GenericToolPage from "./pages/tools/GenericToolPage";
 
 const queryClient = new QueryClient();
