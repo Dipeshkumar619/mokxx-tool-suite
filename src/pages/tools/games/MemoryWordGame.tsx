@@ -3,6 +3,7 @@ import ToolLayout from "@/components/ToolLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Brain, Trophy, Clock, RotateCcw, ArrowRight, CheckCircle, XCircle } from "lucide-react";
+import { findTool } from "@/data/tools";
 
 const WORD_POOL = [
   "apple", "bridge", "castle", "dragon", "eagle", "forest", "garden", "hammer",
