@@ -4,6 +4,7 @@ import {
   Braces, Binary, Fingerprint, Clock, Regex, Globe,
   FileText, Type, CaseSensitive, ArrowDownAZ, ListFilter,
   Search, Tag, Hash, Eye,
+  Brain, Gamepad2,
   LucideIcon
 } from "lucide-react";
 
@@ -93,6 +94,16 @@ export const categories: Category[] = [
       { name: "Slug Generator", slug: "slug-generator", description: "Create URL-friendly slugs from text", icon: Hash },
       { name: "Keyword Density Checker", slug: "keyword-density-checker", description: "Analyze keyword frequency in your content", icon: Search },
       { name: "Open Graph Preview Tool", slug: "open-graph-preview", description: "Preview how your page looks when shared", icon: Eye },
+    ],
+  },
+  {
+    name: "Games & Brain Training",
+    slug: "games",
+    description: "Fun games to train your brain",
+    icon: Gamepad2,
+    color: "text-primary",
+    tools: [
+      { name: "Memory Word Game", slug: "memory-word-game", description: "Memorize flashing words and test your recall", icon: Brain },
     ],
   },
 ];
