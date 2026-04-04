@@ -4,6 +4,7 @@ import {
   Braces, Binary, Fingerprint, Clock, Regex, Globe,
   FileText, Type, CaseSensitive, ArrowDownAZ, ListFilter,
   Search, Tag, Hash, Eye,
+  Brain, Gamepad2,
   LucideIcon
 } from "lucide-react";
 
